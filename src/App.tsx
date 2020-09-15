@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
 import Header from './components/Header';
+import MainContent from './components/MainContent';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     overflow: 'auto',
     flexDirection: 'column',
+    height: '100vh',
   },
 }));
 
@@ -42,7 +44,7 @@ const App: React.FC = () => {
         <Container maxWidth="lg" className={classes.container}>
           <Grid item xs={12}>
             <Paper className={classes.paper}>
-              <h1>hello, world</h1>
+              <MainContent />
             </Paper>
           </Grid>
         </Container>
