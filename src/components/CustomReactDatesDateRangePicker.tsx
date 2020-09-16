@@ -58,6 +58,7 @@ const CustomReactDatesDateRangePicker: React.FC = () => {
               <NavigateNextIcon />
             </IconButton>
           }
+          hideKeyboardShortcutsPanel={true}
           onFocusChange={(focusedInput) => {
             setFocusedInput(!focusedInput ? 'startDate' : focusedInput);
           }}
