@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import IconButton from '@material-ui/core/IconButton';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import moment from 'moment';
 import { DayPickerRangeController } from 'react-dates';
 
@@ -43,6 +46,16 @@ const CustomReactDatesDateRangePicker: React.FC = () => {
           startDate={startDate}
           endDate={endDate}
           focusedInput={focusedInput}
+          navPrev={
+            <IconButton>
+              <NavigateBeforeIcon />
+            </IconButton>
+          }
+          navNext={
+            <IconButton>
+              <NavigateNextIcon />
+            </IconButton>
+          }
           onFocusChange={(focusedInput) => {
             setFocusedInput(!focusedInput ? 'startDate' : focusedInput);
           }}
