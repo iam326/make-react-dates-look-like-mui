@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import { KeyboardDatePicker } from '@material-ui/pickers';
+import { DatePicker } from '@material-ui/pickers';
+import { MaterialUiPickersDate } from '@material-ui/pickers/typings/date';
 import DateFnsUtils from '@date-io/date-fns';
 import jaLocale from 'date-fns/locale/ja';
 
 const useStyles = makeStyles(() =>
   createStyles({
     datePicker: {
-      width: '30ch',
+      width: '25ch',
     },
   })
 );
 
 const MuiDatePicker: React.FC = () => {
   const classes = useStyles();
-  const [selectDate, setSelectDate] = useState<string | null>(null);
+  const [selectedDate, setSelectedData] = useState<MaterialUiPickersDate>(null);
 
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils} locale={jaLocale}>
-      <KeyboardDatePicker
+      <DatePicker
         className={classes.datePicker}
         disableToolbar
         variant="inline"
@@ -27,13 +28,8 @@ const MuiDatePicker: React.FC = () => {
         format="yyyy/MM/dd"
         id="@material-ui/pickers"
         label="@material-ui/pickers"
-        value={selectDate}
-        onChange={(_, selectDate) => {
-          if (selectDate !== undefined) {
-            setSelectDate(selectDate);
-            console.log(selectDate);
-          }
-        }}
+        value={selectedDate}
+        onChange={setSelectedData}
       />
     </MuiPickersUtilsProvider>
   );
