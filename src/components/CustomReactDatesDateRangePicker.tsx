@@ -11,6 +11,8 @@ import 'moment/locale/ja';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
+import './style/react-dates-custom.css';
+
 const useStyles = makeStyles(() =>
   createStyles({
     textField: {
