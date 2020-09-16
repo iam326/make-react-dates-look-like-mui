@@ -2,11 +2,15 @@
 
 react-dates を Material-UI の DatePicker っぽくカスタマイズしてみました。
 
-Material-UI の DatePicker は日付の範囲を指定する機能を持っていません(2020/09/16時点での最新ver - v3.2.10 では)。そのため、日付範囲の指定が機能として必要な場合は、他の DatePicker ライブラリを使用する必要があります。ただ、他のライブラリを使用することによって、デザインの統一性が崩れてしまうという悩みが発生します。
+Material-UI の DatePicker は日付の範囲を指定する機能を持っていません(2020/09/16 時点での最新 ver - v3.2.10 では)。そのため、日付範囲の指定が機能として必要な場合は、他の DatePicker ライブラリを使用する必要があります。ただ、他のライブラリを使用することによって、デザインの統一性が崩れてしまうという悩みが発生します。
 
 今回は、react-dates という DatePicker ライブラリをカスタマイズすることで、この辺の悩みを解決できないかチャレンジしてみました。結果そこそこ良い感じになった気がします。
 
 ちなみに、Material-UI の DatePicker は v4 が開発途中であり、日付範囲を指定できる DatePicker が追加される予定みたいです。公式ドキュメントの方で [Demo](https://v4-0-0-alpha-12.material-ui-pickers.dev/demo/daterangepicker#basic-usage) が公開されていて触ることができます。早くリリースされて欲しいなあ。
+
+## Demo
+
+![demo](./demo.gif)
 
 ## Environment
 
