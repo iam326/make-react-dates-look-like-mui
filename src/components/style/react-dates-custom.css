@@ -9,25 +9,25 @@
   border-radius: 50%;
 }
 
-/* 選択した日付範囲の開始と終了日 */
+/* 指定した日付範囲の開始日・終了日 */
 .CalendarDay__selected,
 .CalendarDay__selected:active,
 .CalendarDay__selected:hover {
-  background: #3f51b5;
+  background: #3f51b5; /* 最も濃い青 */
 }
 
-/* 選択した日付範囲の開始と終了以外の日付 */
-.CalendarDay__hovered_span:hover,
-.CalendarDay__hovered_span {
-  color: #fff;
-  background: #a2aad6;
-}
-
-/* 日付範囲の終了日を選択中 */
+/* 指定した日付範囲の開始日+1 ~ 終了日-1 */
 .CalendarDay__selected_span,
 .CalendarDay__selected_span:active,
 .CalendarDay__selected_span:hover {
-  background: #737fc4;
+  background: #737fc4; /* 少し濃いめの青 */
+}
+
+/* 日付範囲の終了日を指定中 */
+.CalendarDay__hovered_span,
+.CalendarDay__hovered_span:hover {
+  color: #fff;
+  background: #a2aad6; /* 薄めの青 */
 }
 
 .DayPicker {
